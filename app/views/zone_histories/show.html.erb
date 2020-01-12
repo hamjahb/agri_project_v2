@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Task:</strong>
+  <%= @zone_history.task %>
+</p>
+
+<p>
+  <strong>Zone:</strong>
+  <%= @zone_history.zone_id %>
+</p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @zone_history.employee %>
+</p>
+
+<%= link_to 'Edit', edit_zone_history_path(@zone_history) %> |
+<%= link_to 'Back', zone_histories_path %>

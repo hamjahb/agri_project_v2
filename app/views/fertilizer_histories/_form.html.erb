@@ -1,0 +1,37 @@
+<%= form_with(model: fertilizer_history, local: true) do |form| %>
+  <% if fertilizer_history.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fertilizer_history.errors.count, "error") %> prohibited this fertilizer_history from being saved:</h2>
+
+      <ul>
+        <% fertilizer_history.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :fertilizer_id %>
+    <%= form.text_field :fertilizer_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.text_field :quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zone_id %>
+    <%= form.text_field :zone_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :empoyee %>
+    <%= form.text_field :empoyee %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

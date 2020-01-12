@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2020-01-12
+  task: MyString
+  description: MyString
+  next_maintinance: 2020-01-12
+  equipment: one
+  employee: MyString
+
+two:
+  date: 2020-01-12
+  task: MyString
+  description: MyString
+  next_maintinance: 2020-01-12
+  equipment: two
+  employee: MyString

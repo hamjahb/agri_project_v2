@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fertilizer Histories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fertilizer</th>
+      <th>Quantity</th>
+      <th>Zone</th>
+      <th>Empoyee</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fertilizer_histories.each do |fertilizer_history| %>
+      <tr>
+        <td><%= fertilizer_history.fertilizer_id %></td>
+        <td><%= fertilizer_history.quantity %></td>
+        <td><%= fertilizer_history.zone_id %></td>
+        <td><%= fertilizer_history.empoyee %></td>
+        <td><%= link_to 'Show', fertilizer_history %></td>
+        <td><%= link_to 'Edit', edit_fertilizer_history_path(fertilizer_history) %></td>
+        <td><%= link_to 'Destroy', fertilizer_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fertilizer History', new_fertilizer_history_path %>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Harvest Histories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th>Zone</th>
+      <th>Employee</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @harvest_histories.each do |harvest_history| %>
+      <tr>
+        <td><%= harvest_history.quantity %></td>
+        <td><%= harvest_history.price %></td>
+        <td><%= harvest_history.zone_id %></td>
+        <td><%= harvest_history.employee %></td>
+        <td><%= link_to 'Show', harvest_history %></td>
+        <td><%= link_to 'Edit', edit_harvest_history_path(harvest_history) %></td>
+        <td><%= link_to 'Destroy', harvest_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Harvest History', new_harvest_history_path %>

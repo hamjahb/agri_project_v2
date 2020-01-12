@@ -1,0 +1,42 @@
+<%= form_with(model: water_history, local: true) do |form| %>
+  <% if water_history.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(water_history.errors.count, "error") %> prohibited this water_history from being saved:</h2>
+
+      <ul>
+        <% water_history.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :start_time %>
+    <%= form.time_select :start_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_time %>
+    <%= form.time_select :end_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zone_id %>
+    <%= form.text_field :zone_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :employee %>
+    <%= form.text_field :employee %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
