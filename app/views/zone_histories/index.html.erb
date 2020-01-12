@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Zone Histories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Zone</th>
+      <th>Employee</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @zone_histories.each do |zone_history| %>
+      <tr>
+        <td><%= zone_history.task %></td>
+        <td><%= zone_history.zone_id %></td>
+        <td><%= zone_history.employee %></td>
+        <td><%= link_to 'Show', zone_history %></td>
+        <td><%= link_to 'Edit', edit_zone_history_path(zone_history) %></td>
+        <td><%= link_to 'Destroy', zone_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Zone History', new_zone_history_path %>

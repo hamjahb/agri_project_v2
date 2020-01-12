@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @water_history.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @water_history.end_time %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @water_history.quantity %>
+</p>
+
+<p>
+  <strong>Zone:</strong>
+  <%= @water_history.zone_id %>
+</p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @water_history.employee %>
+</p>
+
+<%= link_to 'Edit', edit_water_history_path(@water_history) %> |
+<%= link_to 'Back', water_histories_path %>

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Equipment Histories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Task</th>
+      <th>Description</th>
+      <th>Next maintinance</th>
+      <th>Equipment</th>
+      <th>Employee</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @equipment_histories.each do |equipment_history| %>
+      <tr>
+        <td><%= equipment_history.date %></td>
+        <td><%= equipment_history.task %></td>
+        <td><%= equipment_history.description %></td>
+        <td><%= equipment_history.next_maintinance %></td>
+        <td><%= equipment_history.equipment_id %></td>
+        <td><%= equipment_history.employee %></td>
+        <td><%= link_to 'Show', equipment_history %></td>
+        <td><%= link_to 'Edit', edit_equipment_history_path(equipment_history) %></td>
+        <td><%= link_to 'Destroy', equipment_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Equipment History', new_equipment_history_path %>

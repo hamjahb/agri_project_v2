@@ -1,0 +1,47 @@
+<%= form_with(model: seed, local: true) do |form| %>
+  <% if seed.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(seed.errors.count, "error") %> prohibited this seed from being saved:</h2>
+
+      <ul>
+        <% seed.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :variety %>
+    <%= form.text_field :variety %>
+  </div>
+
+  <div class="field">
+    <%= form.label :seasons %>
+    <%= form.text_field :seasons %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.text_field :quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lifespan %>
+    <%= form.text_field :lifespan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :supplier_id %>
+    <%= form.text_field :supplier_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

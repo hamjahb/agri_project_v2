@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @harvest_history.quantity %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @harvest_history.price %>
+</p>
+
+<p>
+  <strong>Zone:</strong>
+  <%= @harvest_history.zone_id %>
+</p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @harvest_history.employee %>
+</p>
+
+<%= link_to 'Edit', edit_harvest_history_path(@harvest_history) %> |
+<%= link_to 'Back', harvest_histories_path %>
