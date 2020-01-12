@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @fertilizer.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @fertilizer.content %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @fertilizer.quantity %>
+</p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @fertilizer.supplier_id %>
+</p>
+
+<%= link_to 'Edit', edit_fertilizer_path(@fertilizer) %> |
+<%= link_to 'Back', fertilizers_path %>

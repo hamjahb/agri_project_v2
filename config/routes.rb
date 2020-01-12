@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :fertilizers
   resources :zones
   resources :seeds
   resources :suppliers
