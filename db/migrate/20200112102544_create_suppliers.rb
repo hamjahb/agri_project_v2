@@ -4,7 +4,7 @@ class CreateSuppliers < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :address
       t.string :email
-      t.intiger :phone
+      t.integer :phone
       t.references :farm, null: false, foreign_key: true
 
       t.timestamps
