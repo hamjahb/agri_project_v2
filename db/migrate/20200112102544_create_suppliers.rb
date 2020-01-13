@@ -3,7 +3,7 @@ class CreateSuppliers < ActiveRecord::Migration[6.0]
     create_table :suppliers do |t|
       t.string :name
       t.string :address
-      t.email :email
+      t.string :email
       t.intiger :phone
       t.references :farm, null: false, foreign_key: true
 
