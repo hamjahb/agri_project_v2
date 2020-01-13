@@ -3,8 +3,8 @@ class CreateSeeds < ActiveRecord::Migration[6.0]
     create_table :seeds do |t|
       t.string :name
       t.string :variety
-      t.array :seasons
-      t.array :quantity
+      t.text :seasons, array: true, default: []
+      t.text :quantity, array: true, default: []
       t.string :lifespan
       t.references :supplier, null: false, foreign_key: true
 
